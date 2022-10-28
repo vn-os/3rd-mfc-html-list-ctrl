@@ -107,6 +107,8 @@ struct HTMLLIST_ITEM
 
 class CHTMLListCtrl : public CWnd
 {
+	DECLARE_DYNAMIC(CHTMLListCtrl)
+
 // Construction
 public:
 	CHTMLListCtrl();

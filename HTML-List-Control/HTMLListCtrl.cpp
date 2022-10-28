@@ -91,7 +91,7 @@ CHTMLListCtrl::CHTMLListCtrl()
 	lf.lfHeight = -11;
 	lf.lfWeight = FW_NORMAL;
 	
-	_tcscpy(lf.lfFaceName,_T("Tahoma"));
+	_tcscpy_s(lf.lfFaceName,_T("Tahoma"));
 	m_font.CreateFontIndirect(&lf);
 
 	m_clrBkSelectedItem = RGB(127,202,254);
@@ -1123,7 +1123,7 @@ void CHTMLListCtrl::DrawItem(CDC *pDC, CRect rcItem, HTMLLIST_ITEM *pItem, BOOL 
 		TCHAR szBuffer[_MAX_PATH];
 		memset(szBuffer,0,_MAX_PATH);
 		
-		_tcscpy(szBuffer,pItem->sItemText);
+		_tcscpy_s(szBuffer,pItem->sItemText);
 		
 		if(PathCompactPath(pDC->GetSafeHdc(),szBuffer,rc.Width()))
 		{
